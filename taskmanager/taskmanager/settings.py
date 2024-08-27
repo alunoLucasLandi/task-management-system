@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tarefas',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'task_management_db',  # Substitua pelo nome do seu banco de dados MySQL
+        'USER': 'root',  # Substitua pelo seu usuário do MySQL
+        'PASSWORD': '202310',  # Substitua pela sua senha do MySQL
+        'HOST': 'localhost',  # Endereço do servidor MySQL, normalmente 'localhost'
+        'PORT': '3306',  # Porta do MySQL, normalmente '3306'
     }
 }
 
@@ -105,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
