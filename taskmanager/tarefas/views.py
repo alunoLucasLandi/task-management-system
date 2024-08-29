@@ -60,3 +60,12 @@ def editar_tarefa(request, id):
         return JsonResponse({'status': 'Tarefa editada com sucesso!'})
     
     return JsonResponse({'status': 'Método não permitido.'}, status=405)
+
+@csrf_exempt
+def excluir_tarefa(request, id):
+    try:
+        tarefa = Tarefa.objects.get(id=id)
+        tarefa.delete()
+        return JsonResponse({'message': 'Tarefa excluída com sucesso!'}, status=200)
+    except Tarefa.DoesNotExist:
+        return JsonResponse({'error': 'Tarefa não encontrada.'}, status=404)

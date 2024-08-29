@@ -35,4 +35,110 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+.kanban-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+.kanban-column {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+}
+
+.task-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.task-item.completed {
+  background-color: #d4edda;
+  text-decoration: line-through;
+}
+
+.selected {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  outline: none;
+}
+.form-container {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-container button[type="button"],
+.form-container button[type="submit"] {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button[type="button"]:hover,
+.form-container button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form-container button.selected {
+  background-color: #0056b3;
+  color: white;
+}
+
+.form-container button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.task-item {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.concluida {
+  background-color: #d4edda;
+  text-decoration: line-through;
+}
+
+button {
+  margin-right: 5px;
+}
+.task-item button {
+  margin-right: 5px;
+}
+
+.task-item .delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.task-item .delete-button:hover {
+  background-color: darkred;
 }
